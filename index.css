@@ -622,8 +622,7 @@ textarea.form-control {
   padding: 10px 22px;
   border-radius: var(--rounded-full);
   text-decoration: none;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
-  box-shadow: 
+  box-shadow:
     0 4px 12px rgba(214, 22, 62, 0.25),
     inset 0 1px 1px rgba(255, 255, 255, 0.2);
   transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -634,7 +633,7 @@ textarea.form-control {
 
 .buyNow:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 6px 20px rgba(214, 22, 62, 0.45),
     inset 0 1px 1px rgba(255, 255, 255, 0.3);
   background: linear-gradient(135deg, #e0244c 0%, #901c36 100%);
@@ -653,25 +652,26 @@ textarea.form-control {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.3) 40%,
-    rgba(255, 255, 255, 0.3) 45%,
-    transparent 55%
-  );
+  background: linear-gradient(120deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.3) 40%,
+      rgba(255, 255, 255, 0.3) 45%,
+      transparent 55%);
   transition: none;
   animation: buyNowShimmer 4s infinite ease-in-out;
 }
 
 @keyframes buyNowPulse {
-  0%, 100% {
-    box-shadow: 
+
+  0%,
+  100% {
+    box-shadow:
       0 4px 12px rgba(214, 22, 62, 0.25),
       0 0 0 0 rgba(214, 22, 62, 0.3);
   }
+
   50% {
-    box-shadow: 
+    box-shadow:
       0 4px 16px rgba(214, 22, 62, 0.35),
       0 0 0 8px rgba(214, 22, 62, 0);
   }
@@ -681,7 +681,9 @@ textarea.form-control {
   0% {
     left: -100%;
   }
-  30%, 100% {
+
+  30%,
+  100% {
     left: 100%;
   }
 }
@@ -1592,5 +1594,213 @@ code {
   .footer-links {
     flex-wrap: wrap;
     gap: var(--space-sm);
+  }
+}
+
+
+
+.freshSale-wrap {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  animation: freshSale-slideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
+}
+
+.freshSale {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #d6163e 0%, #80142d 100%);
+  color: #ffffff;
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 20px rgba(214, 22, 62, 0.4),
+    0 0 0 0 rgba(214, 22, 62, 0.5);
+  animation: freshSale-pulse 2s ease-in-out infinite;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.freshSale:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow:
+    0 8px 32px rgba(214, 22, 62, 0.55),
+    0 0 0 0 rgba(214, 22, 62, 0);
+  color: #ffffff;
+}
+
+.freshSale:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Shimmer sweep */
+.freshSale::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(105deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.25) 50%,
+      transparent 60%);
+  animation: freshSale-shimmer 3s ease-in-out infinite;
+}
+
+/* .freshSale-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      animation: freshSale-bounce 1s ease-in-out infinite;
+    } */
+
+.freshSale-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.freshSale-main {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.freshSale-urgency {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Pulsing live dot */
+.freshSale-dot {
+  width: 6px;
+  height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  animation: freshSale-dotPulse 1.2s ease-in-out infinite;
+}
+
+/* Close button */
+.freshSale-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 22px;
+  height: 22px;
+  background: #1b1111;
+  border: 2px solid #3f3132;
+  border-radius: 50%;
+  color: #f3ddde;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 1;
+  line-height: 1;
+}
+
+.freshSale-close:hover {
+  background: #d6163e;
+  border-color: #d6163e;
+  transform: scale(1.15);
+}
+
+/* Keyframes */
+@keyframes freshSale-slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes freshSale-pulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 4px 20px rgba(214, 22, 62, 0.4),
+      0 0 0 0 rgba(214, 22, 62, 0.5);
+  }
+
+  50% {
+    box-shadow:
+      0 4px 20px rgba(214, 22, 62, 0.4),
+      0 0 0 12px rgba(214, 22, 62, 0);
+  }
+}
+
+@keyframes freshSale-shimmer {
+  0% {
+    left: -100%;
+  }
+
+  40% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes freshSale-bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes freshSale-dotPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .freshSale-wrap {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+  }
+
+  .freshSale {
+    width: 100%;
+    justify-content: center;
   }
 }
