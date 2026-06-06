@@ -737,7 +737,7 @@ textarea.form-control {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(27, 17, 17, 0.50) 0%, rgb(214 22 62 / 7%) 10% 20%, var(--background) 100%);
+    background: linear-gradient(to bottom, rgba(27, 17, 17, 0.50) 0%, rgb(255 228 233 / 37%) 10% 20%, var(--background) 100%);
 }
 
 .hero-content {
