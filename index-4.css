@@ -893,8 +893,8 @@ textarea.form-control {
 }
 
 .product-img-wrap img {
-    max-height: 80%;
-    max-width: 80%;
+    max-height: 100%;
+    max-width: 100%;
     object-fit: contain;
     transition: transform 0.4s ease;
 }
@@ -1870,7 +1870,7 @@ code {
     color: var(--on-primary);
 }
 
-.specialHover3{
-    background:var(--surface-container-lowest);
-    color: var(--primary );
+.specialHover3 {
+    background: var(--surface-container-lowest);
+    color: var(--primary);
 }
