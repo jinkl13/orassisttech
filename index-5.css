@@ -48,8 +48,8 @@
     --on-error: #690005;
     --error-container: #93000a;
 
-    --background: #ffffff;
-    --on-background: #1b1111;
+    --background: #1b1111;
+    --on-background: #f3ddde;
     --surface-variant: #3f3132;
 
     /* --- Functional aliases (for readability) --- */
@@ -219,18 +219,15 @@ h4 {
     line-height: 28px;
 }
 
-h1 {
-    color: var(--primary-container);
-}
-
+h1,
 h2,
 h3,
 h4 {
-    color: var(--surface);
+    color: var(--on-surface);
 }
 
 p {
-    color: var(--surface-container-high);
+    color: var(--on-surface-variant);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -238,7 +235,7 @@ p {
 
 strong {
     font-weight: 600;
-    color: var(--primary-container);
+    color: var(--on-surface);
 }
 
 a {
@@ -322,7 +319,7 @@ video {
 }
 
 .section-label {
-    color: var(--primary-container);
+    color: var(--primary);
     margin-bottom: var(--space-xs);
 }
 
@@ -343,7 +340,7 @@ video {
 }
 
 .section-header p {
-    color: var(--surface-container-highest);
+    color: var(--on-surface-variant);
 }
 
 /* -----------------------------------------------------------------
@@ -384,7 +381,7 @@ video {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-container);
+    color: var(--on-surface);
     border-color: var(--outline-variant);
 }
 
@@ -528,7 +525,7 @@ textarea.form-control {
 .logo img {
     height: 36px;
     width: auto;
-    border-radius: 60px;
+    border-radius: 50px;
 }
 
 .site-header.scrolled .logo img {
@@ -723,9 +720,9 @@ textarea.form-control {
 
 .hero-video-wrap {
     position: absolute;
-    align-content: center;
     inset: 0;
     z-index: 1;
+    align-content: center;
 }
 
 .hero-video-wrap video {
@@ -733,12 +730,14 @@ textarea.form-control {
     object-fit: cover;
 }
 
-
 .hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(27, 17, 17, 0.50) 0%, rgb(214 22 62 / 7%) 10% 20%, var(--background) 100%);
+    background: linear-gradient(to bottom,
+            rgba(27, 17, 17, 0.50) 0%,
+            rgba(27, 17, 17, 0.85) 60%,
+            var(--background) 100%);
 }
 
 .hero-content {
@@ -753,7 +752,7 @@ textarea.form-control {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--primary-container);
+    color: var(--primary);
     margin-bottom: var(--space-sm);
 }
 
@@ -771,9 +770,8 @@ textarea.form-control {
 
 /* Typewriter text container — fixed height prevents layout shift */
 .typewriter-line {
-    color: var(--on-background);
+    color: var(--primary);
     display: inline;
-    font-size: 32px;
 }
 
 .typewriter-cursor {
@@ -798,7 +796,7 @@ textarea.form-control {
 .hero-desc {
     max-width: 600px;
     margin-bottom: var(--space-md);
-    color: var(--surface-bright);
+    color: var(--on-surface-variant);
 }
 
 .hero-cta {
@@ -869,7 +867,7 @@ textarea.form-control {
    9. PRODUCTS SECTION
    ----------------------------------------------------------------- */
 .products-section {
-    background: var(--background);
+    background: var(--surface-container-low);
     border-top: 1px solid var(--outline-variant);
     border-bottom: 1px solid var(--outline-variant);
 }
@@ -1030,7 +1028,7 @@ textarea.form-control {
    10. ROI CALCULATOR
    ----------------------------------------------------------------- */
 .calc-section {
-    background: var(--background);
+    background: var(--surface-container);
     border-top: 1px solid var(--outline-variant);
     border-bottom: 1px solid var(--outline-variant);
 }
@@ -1223,7 +1221,6 @@ input[type="range"]::-moz-range-thumb {
 
 .team-card h3 {
     margin-bottom: 4px;
-    color: var(--onsurface-variant);
 }
 
 .member-role {
@@ -1241,7 +1238,7 @@ input[type="range"]::-moz-range-thumb {
    12. CONTACT SECTION
    ----------------------------------------------------------------- */
 .contact-section {
-    background: var(--background);
+    background: var(--surface-container-low);
     border-top: 1px solid var(--outline-variant);
 }
 
@@ -1810,68 +1807,4 @@ code {
 
 .customIcons {
     filter: invert(13%) sepia(100%) saturate(7471%) hue-rotate(16deg) brightness(109%) contrast(114%);
-}
-
-#title-assist,
-#title-support,
-#title-suite {
-    color: var(--on-surface) !important;
-}
-
-.productCardText {
-    color: var(--onsurface-variant);
-}
-
-
-/*-------------------------------------------------------------------------
------------------------------------------------------------------
----------------------------------
-------------------
- index4 addon styles 
- -------------------------------------------------------------------------
------------------------------------------------------------------
----------------------------------
-------------------*/
-
-
-/* Optimized for #F3DDDE background */
-.orassist-card {
-
-    border-radius: 16px;
-    /* Multi-layered smooth shadow using a deep, warm tint */
-    box-shadow:
-        0 4px 6px -1px rgba(51, 32, 34, 0.08),
-        0 2px 4px -1px rgba(51, 32, 34, 0.04),
-        0 12px 24px -4px rgba(51, 32, 34, 0.06);
-
-    /* Smooth transition for the 3D lift effect */
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-}
-
-/* 3D Hover Effect */
-.orassist-card:hover {
-    transform: translateY(-6px);
-    box-shadow:
-        0 20px 32px -8px rgba(51, 32, 34, 0.15),
-        0 10px 14px -6px rgba(51, 32, 34, 0.08);
-}
-
-
-.specialHover1,
-.specialHover2 {
-    transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.specialHover1:hover {
-    background-color: var(--surface-container-lowest);
-}
-
-.specialHover2:hover {
-    border-color: var(--on-primary);
-    color: var(--on-primary);
-}
-
-.specialHover3 {
-    background: var(--surface-container-lowest);
-    color: var(--primary);
 }
