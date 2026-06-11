@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dual Video Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="page">
+
+   
+    <div class="video-block">
+      
+      <div class="video-wrapper" id="thumb-wrap">
+        <video  autoplay muted loop class="thumb-img">
+          <source src="../files/hero_optimised.mp4" type="video/mp4" />
+        </video>
+        
+        <div class="play-btn" id="open-overlay" role="button" tabindex="0" aria-label="Play video in overlay">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay-backdrop" id="overlay" role="dialog" aria-modal="true" aria-label="Video overlay">
+    <div class="overlay-inner">
+      <button class="close-btn" id="close-overlay" aria-label="Close overlay">&#10005;</button>
+      <iframe
+        id="overlay-iframe"
+        src=""
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen
+        title="Overlay video"
+      ></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

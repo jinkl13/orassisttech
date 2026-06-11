@@ -1,0 +1,172 @@
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ────────────────────────────────────────────── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f0f0f;
+  color: #e5e5e5;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+}
+
+/* ── Page layout ─────────────────────────────────────── */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Video block label ───────────────────────────────── */
+.video-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* ── 16:9 wrapper trick ──────────────────────────────── */
+/*
+  padding-top: 56.25% = 9/16 × 100
+  This forces the div to always be 16:9
+  regardless of its actual pixel width.
+  The iframe is then stretched to fill it
+  with position: absolute.
+*/
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;      /* 16:9 ratio */
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper .thumb-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;        /* for the thumbnail image */
+  display: block;
+}
+
+/* ── Thumbnail play button ───────────────────────────── */
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease;
+}
+
+.play-btn:hover,
+.play-btn:focus-visible {
+  background: rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.play-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #111;
+  padding-left: 4px;        /* optical centering of play triangle */
+  transition: transform 0.15s ease;
+}
+
+.play-btn:hover .play-icon {
+  transform: scale(1.08);
+}
+
+/* ── Overlay backdrop ────────────────────────────────── */
+.overlay-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.overlay-backdrop.active {
+  display: flex;
+}
+
+/* ── Overlay video container ─────────────────────────── */
+/*
+  aspect-ratio: 16/9 keeps the overlay frame
+  at the correct ratio on all screen sizes.
+  width: min(90vw, 860px) caps the max size.
+*/
+.overlay-inner {
+  position: relative;
+  width: min(90vw, 860px);
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+
+.overlay-inner iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── Overlay close button ────────────────────────────── */
+.close-btn {
+  position: absolute;
+  top: -42px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.15s;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 600px) {
+  body {
+    padding: 1.25rem 1rem;
+  }
+
+  .play-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
