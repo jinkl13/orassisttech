@@ -28,6 +28,7 @@
     <meta property="og:url" content="https://www.orassist.tech">
     <meta property="og:image" content="assets/logo.png">
     <meta property="og:site_name" content="Orassist">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -344,41 +345,39 @@
          ============================================================ -->
         <section class="section-spacing ps-section" id="showcase" aria-labelledby="showcase-heading">
             <div class="container">
-                <div class="section-header reveal">
+                <div class="section-header">
                     <div class="section-label label-lg">In Detail</div>
                     <h2 id="showcase-heading">Our Bestsellers, <strong>Assist 1.0</strong></h2>
                     <p>We have sold out of our initial batch of Assist 1.0 units. Upcoming is a new version with enhanced features.</p>
                 </div>
-                <div class="video-block">
+
+                <div class="video-block reveal">
                     <div class="video-wrapper" id="thumb-wrap">
-                        <video  autoplay muted loop class="thumb-img">
-                        <source src="files/hero_optimised.mp4" type="video/mp4" />
+                        <video autoplay muted loop class="thumb-img">
+                            <source src="files/hero_optimised.mp4" type="video/mp4" />
                         </video>
-                        
                         <div class="play-btn" id="open-overlay" role="button" tabindex="0" aria-label="Play video in overlay">
-                        
+                            <div class="play-icon">&#9654;</div>
                         </div>
-                    </div>
-                    </div>
-
-                </div>
-
-                <!-- Overlay -->
-                <div class="overlay-backdrop" id="overlay" role="dialog" aria-modal="true" aria-label="Video overlay">
-                    <div class="overlay-inner">
-                    <button class="close-btn" id="close-overlay" aria-label="Close overlay">&#10005;</button>
-                    <iframe
-                        id="overlay-iframe"
-                        src=""
-                        allow="autoplay; encrypted-media; picture-in-picture"
-                        allowfullscreen
-                        title="Overlay video"
-                    ></iframe>
                     </div>
                 </div>
 
             </div>
         </section>
+
+        <!-- Overlay — outside section & container so it can cover the full viewport -->
+        <div class="overlay-backdrop" id="overlay" role="dialog" aria-modal="true" aria-label="Video overlay">
+            <div class="overlay-inner">
+                <button class="close-btn" id="close-overlay" aria-label="Close overlay">&#10005;</button>
+                <iframe
+                    id="overlay-iframe"
+                    src=""
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    title="Overlay video"
+                ></iframe>
+            </div>
+        </div>
 
         <!-- ============================================================
          TESTIMONIALS

@@ -3,7 +3,7 @@ const openBtn    = document.getElementById('open-overlay');
 const closeBtn   = document.getElementById('close-overlay');
 const iframeEl   = document.getElementById('overlay-iframe');
 
-const YT_SRC = 'https://youtu.be/7u6-hMqBoWo?si=BFijIcOmixjTF38j';
+const YT_SRC = 'https://www.youtube.com/embed/7u6-hMqBoWo?autoplay=1&rel=0&enablejsapi=1&origin=' + window.location.origin;
 
 function openOverlay() {
   iframeEl.src = YT_SRC;
