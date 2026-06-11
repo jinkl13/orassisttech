@@ -28,6 +28,7 @@
     <meta property="og:url" content="https://www.orassist.tech">
     <meta property="og:image" content="assets/logo.png">
     <meta property="og:site_name" content="Orassist">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -339,42 +340,39 @@
          ============================================================ -->
         <section class="section-spacing ps-section" id="showcase" aria-labelledby="showcase-heading">
             <div class="container">
-                <div class="section-header reveal">
+                <div class="section-header">
                     <div class="section-label label-lg">In Detail</div>
                     <h2 id="showcase-heading">Our Bestsellers, <strong>Assist 1.0</strong></h2>
                     <p>We have sold out of our initial batch of Assist 1.0 units. Upcoming is a new version with enhanced features.</p>
                 </div>
-                <div class="video-block">
+
+                <div class="video-block reveal">
                     <div class="video-wrapper" id="thumb-wrap">
-                        <video  autoplay muted loop class="thumb-img">
-                        <source src="files/hero_optimised.mp4" type="video/mp4" />
+                        <video autoplay muted loop class="thumb-img">
+                            <source src="files/hero_optimised.mp4" type="video/mp4" />
                         </video>
-                        
                         <div class="play-btn" id="open-overlay" role="button" tabindex="0" aria-label="Play video in overlay">
-                        
+                            <div class="play-icon">&#9654;</div>
                         </div>
-                    </div>
-                    </div>
-
-                </div>
-
-                <!-- Overlay -->
-                <div class="overlay-backdrop" id="overlay" role="dialog" aria-modal="true" aria-label="Video overlay">
-                    <div class="overlay-inner">
-                    <button class="close-btn" id="close-overlay" aria-label="Close overlay">&#10005;</button>
-                    <iframe
-                        id="overlay-iframe"
-                        src=""
-                        allow="autoplay; encrypted-media; picture-in-picture"
-                        allowfullscreen
-                        title="Overlay video"
-                    ></iframe>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Overlay — outside section & container so it can cover the full viewport -->
+        <div class="overlay-backdrop" id="overlay" role="dialog" aria-modal="true" aria-label="Video overlay">
+            <div class="overlay-inner">
+                <button class="close-btn" id="close-overlay" aria-label="Close overlay">&#10005;</button>
+                <iframe
+                    id="overlay-iframe"
+                    src=""
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    title="Overlay video"
+                ></iframe>
+            </div>
+        </div>
 
         <!-- ============================================================
          TESTIMONIALS
@@ -387,14 +385,18 @@
                     <p>Hear from clinicians who've made the switch to hands-free practice.</p>
                 </div>
 
+                <!-- Tab switcher -->
                 <div class="testi-tabs reveal" role="tablist" aria-label="Testimonial format">
-                    <button class="testi-tab active" role="tab" aria-selected="true" data-testi-tab="quotes" aria-controls="testi-panel-quotes">
+                    <button class="testi-tab active" role="tab" aria-selected="true" data-testi-tab="quotes"
+                        aria-controls="testi-panel-quotes">
                         <i class="ph ph-quotes"></i> Reviews
                     </button>
-                    <button class="testi-tab" role="tab" aria-selected="false" data-testi-tab="videos" aria-controls="testi-panel-videos">
+                    <button class="testi-tab" role="tab" aria-selected="false" data-testi-tab="videos"
+                        aria-controls="testi-panel-videos">
                         <i class="ph ph-play-circle"></i> Videos
                     </button>
-                    <button class="testi-tab" role="tab" aria-selected="false" data-testi-tab="mixed" aria-controls="testi-panel-mixed">
+                    <button class="testi-tab" role="tab" aria-selected="false" data-testi-tab="mixed"
+                        aria-controls="testi-panel-mixed">
                         <i class="ph ph-squares-four"></i> Mixed
                     </button>
                 </div>
@@ -412,7 +414,9 @@
                                 <span class="ps-product-tag tag-assist testi-product-tag">Assist 2.0</span>
                             </div>
                             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p class="testi-quote">"Assist 2.0 has completely changed how I manage solo procedures. I used to struggle with suction positioning — now it just stays put."</p>
+                            <p class="testi-quote">"Assist 2.0 has completely changed how I manage solo procedures. I
+                                used to struggle with suction positioning every single appointment — now it just stays
+                                put."</p>
                         </article>
                         <article class="testi-card reveal-stagger" style="transition-delay:100ms">
                             <div class="testi-card-top">
@@ -424,7 +428,9 @@
                                 <span class="ps-product-tag tag-assist testi-product-tag">Assist 2.0</span>
                             </div>
                             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p class="testi-quote">"During banding, two free hands make all the difference. The autoclavable base is a bonus — hygiene protocols are tighter now."</p>
+                            <p class="testi-quote">"During banding, two free hands make all the difference. Assist 2.0
+                                gives me exactly that. The autoclavable base is a bonus — hygiene protocols are tighter
+                                now."</p>
                         </article>
                         <article class="testi-card reveal-stagger" style="transition-delay:200ms">
                             <div class="testi-card-top">
@@ -436,7 +442,8 @@
                                 <span class="ps-product-tag tag-support testi-product-tag">Support 1.0</span>
                             </div>
                             <div class="testi-stars" aria-label="4 out of 5 stars">★★★★☆</div>
-                            <p class="testi-quote">"Support 1.0 is what GA-assisted dental setups have been missing. Circuit kinking was a constant nuisance. Pre-ordering a second unit."</p>
+                            <p class="testi-quote">"Support 1.0 is what GA-assisted dental setups have been missing.
+                                Circuit kinking was a constant nuisance. Pre-ordering a second unit."</p>
                         </article>
                         <article class="testi-card reveal-stagger" style="transition-delay:300ms">
                             <div class="testi-card-top">
@@ -448,7 +455,9 @@
                                 <span class="ps-product-tag tag-solo testi-product-tag">Solo</span>
                             </div>
                             <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                            <p class="testi-quote">"The Solo bundle gave me Assist and Support at once. My throughput increased about 30% in the first month."</p>
+                            <p class="testi-quote">"Running a three-chair clinic solo requires the right tools. The Solo
+                                bundle gave me Assist and Support at once — my throughput increased by about 30% in the
+                                first month."</p>
                         </article>
                     </div>
                 </div>
@@ -458,7 +467,8 @@
                     <div class="testi-video-grid">
                         <div class="testi-video-card reveal-stagger" style="transition-delay:0ms">
                             <div class="testi-video-thumb" data-yt="https://www.youtube.com/embed/8LSt8_11wbQ">
-                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg" alt="Dr. Riya reviews Assist 2.0" loading="lazy">
+                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg"
+                                    alt="Dr. Riya reviews Assist 2.0" loading="lazy">
                                 <button class="testi-play-btn" aria-label="Play testimonial video">
                                     <i class="ph ph-play-fill"></i>
                                 </button>
@@ -466,12 +476,14 @@
                             <div class="testi-video-meta">
                                 <span class="ps-product-tag tag-assist">Assist 2.0</span>
                                 <div class="testi-name">Dr. Riya Menon</div>
-                                <div class="testi-role label-sm">General Dentist, Kochi — hands-free suction in practice</div>
+                                <div class="testi-role label-sm">General Dentist, Kochi — hands-free suction in practice
+                                </div>
                             </div>
                         </div>
                         <div class="testi-video-card reveal-stagger" style="transition-delay:150ms">
                             <div class="testi-video-thumb" data-yt="https://www.youtube.com/embed/8LSt8_11wbQ">
-                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg" alt="Dr. Vivek reviews Solo bundle" loading="lazy">
+                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg"
+                                    alt="Dr. Vivek reviews Solo bundle" loading="lazy">
                                 <button class="testi-play-btn" aria-label="Play testimonial video">
                                     <i class="ph ph-play-fill"></i>
                                 </button>
@@ -479,7 +491,8 @@
                             <div class="testi-video-meta">
                                 <span class="ps-product-tag tag-solo">Solo</span>
                                 <div class="testi-name">Dr. Vivek N.</div>
-                                <div class="testi-role label-sm">Prosthodontist, Trivandrum — the solo bundle in a 3-chair setup</div>
+                                <div class="testi-role label-sm">Prosthodontist, Trivandrum — the solo bundle in a
+                                    3-chair setup</div>
                             </div>
                         </div>
                     </div>
@@ -498,11 +511,13 @@
                                 <span class="ps-product-tag tag-assist testi-product-tag">Assist 2.0</span>
                             </div>
                             <div class="testi-stars">★★★★★</div>
-                            <p class="testi-quote">"Completely changes how I manage solo procedures. Suction just stays put."</p>
+                            <p class="testi-quote">"Completely changes how I manage solo procedures. Suction just stays
+                                put."</p>
                         </article>
                         <div class="testi-mixed-video reveal-stagger" style="transition-delay:100ms">
                             <div class="testi-video-thumb" data-yt="https://www.youtube.com/embed/8LSt8_11wbQ">
-                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg" alt="Clinical demo video" loading="lazy">
+                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg"
+                                    alt="Clinical demo video" loading="lazy">
                                 <button class="testi-play-btn" aria-label="Play video">
                                     <i class="ph ph-play-fill"></i>
                                 </button>
@@ -522,7 +537,8 @@
                                 <span class="ps-product-tag tag-support testi-product-tag">Support 1.0</span>
                             </div>
                             <div class="testi-stars">★★★★☆</div>
-                            <p class="testi-quote">"GA circuit kinking was a constant nuisance. Pre-ordering a second unit."</p>
+                            <p class="testi-quote">"GA circuit kinking was a constant nuisance. Pre-ordering a second
+                                unit."</p>
                         </article>
                         <article class="testi-card testi-mixed-card reveal-stagger" style="transition-delay:300ms">
                             <div class="testi-card-top">
@@ -534,11 +550,13 @@
                                 <span class="ps-product-tag tag-solo testi-product-tag">Solo</span>
                             </div>
                             <div class="testi-stars">★★★★★</div>
-                            <p class="testi-quote">"Throughput increased about 30% in the first month. Worth every rupee."</p>
+                            <p class="testi-quote">"Throughput increased about 30% in the first month. The bundle is
+                                worth every rupee."</p>
                         </article>
                         <div class="testi-mixed-video reveal-stagger" style="transition-delay:400ms">
                             <div class="testi-video-thumb" data-yt="https://www.youtube.com/embed/8LSt8_11wbQ">
-                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg" alt="Solo bundle overview" loading="lazy">
+                                <img src="https://img.youtube.com/vi/8LSt8_11wbQ/maxresdefault.jpg"
+                                    alt="Solo bundle overview" loading="lazy">
                                 <button class="testi-play-btn" aria-label="Play video">
                                     <i class="ph ph-play-fill"></i>
                                 </button>
@@ -552,7 +570,6 @@
                 </div>
             </div>
         </section>
-
         <!-- ============================================================
          ROI CALCULATOR
          ============================================================ -->
@@ -947,74 +964,72 @@ $w.onReady(function () {
        NEW SECTIONS: Testimonial tabs, video embeds, scroll animations
        ============================================================ -->
     <script>
-    (function () {
-        /* ---- Testimonial tabs ---- */
-        var testiTabs = document.querySelectorAll('.testi-tab');
-        var testiPanels = document.querySelectorAll('.testi-panel');
-        testiTabs.forEach(function (tab) {
-            tab.addEventListener('click', function () {
-                testiTabs.forEach(function (t) {
-                    t.classList.remove('active');
-                    t.setAttribute('aria-selected', 'false');
+        (function () {
+            /* ---- Testimonial tabs ---- */
+            const testiTabs = document.querySelectorAll('.testi-tab');
+            const testiPanels = document.querySelectorAll('.testi-panel');
+            testiTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    testiTabs.forEach(function (t) {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    testiPanels.forEach(function (p) { p.classList.remove('active'); });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    const target = document.getElementById('testi-panel-' + tab.dataset.testiTab);
+                    if (target) target.classList.add('active');
                 });
-                testiPanels.forEach(function (p) { p.classList.remove('active'); });
-                tab.classList.add('active');
-                tab.setAttribute('aria-selected', 'true');
-                var target = document.getElementById('testi-panel-' + tab.dataset.testiTab);
-                if (target) target.classList.add('active');
             });
-        });
 
-        /* ---- YouTube embed on thumbnail click ---- */
-        document.querySelectorAll('.testi-video-thumb').forEach(function (thumb) {
-            thumb.addEventListener('click', function () {
-                var ytUrl = thumb.dataset.yt;
-                if (!ytUrl) return;
-                var iframe = document.createElement('iframe');
-                iframe.src = ytUrl + '?autoplay=1&rel=0';
-                iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
-                iframe.allowFullscreen = true;
-                iframe.style.cssText = 'width:100%;height:100%;border:none;border-radius:inherit;position:absolute;inset:0;';
-                thumb.innerHTML = '';
-                thumb.style.position = 'relative';
-                thumb.appendChild(iframe);
-            });
-        });
-
-        /* ---- Intersection Observer scroll animations ---- */
-        var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        function setupObserver(selector, options) {
-            var els = document.querySelectorAll(selector);
-            if (!els.length) return;
-            var obs = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('anim-in');
-                        obs.unobserve(entry.target);
-                    }
+            /* ---- YouTube embed on thumbnail click ---- */
+            document.querySelectorAll('.testi-video-thumb').forEach(function (thumb) {
+                thumb.addEventListener('click', function () {
+                    const ytUrl = thumb.dataset.yt;
+                    if (!ytUrl) return;
+                    const iframe = document.createElement('iframe');
+                    iframe.src = ytUrl + '?autoplay=1&rel=0';
+                    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.style.cssText = 'width:100%;height:100%;border:none;border-radius:inherit;position:absolute;inset:0;';
+                    thumb.innerHTML = '';
+                    thumb.style.position = 'relative';
+                    thumb.appendChild(iframe);
                 });
-            }, options || { threshold: 0.15 });
-            els.forEach(function (el) { obs.observe(el); });
-        }
-
-        if (!prefersReduced) {
-            setupObserver('.ps-panel');
-            setupObserver('.ps-img-card');
-            setupObserver('.ps-island-card');
-            setupObserver('.ps-carousel-wrap');
-            setupObserver('.testi-tabs');
-            setupObserver('.testi-card');
-            setupObserver('.testi-video-card');
-            setupObserver('.testi-mixed-card');
-            setupObserver('.testi-mixed-video');
-            setupObserver('.reveal-stagger');
-        } else {
-            document.querySelectorAll('.ps-panel,.ps-img-card,.ps-island-card,.ps-carousel-wrap,.testi-tabs,.testi-card,.testi-video-card,.testi-mixed-card,.testi-mixed-video,.reveal-stagger').forEach(function (el) {
-                el.classList.add('anim-in', 'anim-reduced');
             });
-        }
-    })();
+
+            /* ---- Intersection Observer scroll animations ---- */
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function setupObserver(selector, options) {
+                var els = document.querySelectorAll(selector);
+                if (!els.length) return;
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('anim-in');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, options || { threshold: 0.15 });
+                els.forEach(function (el) { obs.observe(el); });
+            }
+
+            if (!prefersReduced) {
+                
+                setupObserver('.testi-tabs');
+                setupObserver('.testi-card');
+                setupObserver('.testi-video-card');
+                setupObserver('.testi-mixed-card');
+                setupObserver('.testi-mixed-video');
+                setupObserver('.reveal-stagger');
+            } else {
+                /* Reduced motion: just make everything visible */
+                document.querySelectorAll('.testi-tabs,.testi-card,.testi-video-card,.testi-mixed-card,.testi-mixed-video,.reveal-stagger').forEach(function (el) {
+                    el.classList.add('anim-in', 'anim-reduced');
+                });
+            }
+        })();
     </script>
 </body>
 
