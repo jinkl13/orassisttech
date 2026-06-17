@@ -38,7 +38,7 @@
     <meta name="twitter:image" content="assets/logo.png">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="index-6.css">
+    <link rel="stylesheet" href="index-light-1.css">
 
 
     <!-- Phosphor Icons -->
@@ -203,9 +203,9 @@
                                 <img src="assets/Icons/versatile-icon_.svg" class="customIcons" id="customIcons">
                             </div>
                             <div>
-                                <div class="pill-title">Universal Integration</div>
-                                <p class="pill-desc">Adapts to any standard dental chair suction tubing without
-                                    modifications or adapters.</p>
+                                <div class="pill-title">Independent Operation</div>
+                                <p class="pill-desc">Adapts to dental chair suction tubing without
+                                    modifications or adapters.<span style="color:green;">//change wordings</span></p>
                             </div>
                         </div>
 
@@ -219,6 +219,87 @@
                                     positioning.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         ROI CALCULATOR
+         ============================================================ -->
+        <section class="section-spacing calc-section" id="calculator" aria-labelledby="calc-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-label label-lg">Your Savings</div>
+                    <h2 id="calc-heading">Calculate Your Practice Savings</h2>
+                    <p>See how much clinical overhead you eliminate and how fast Assist 2.0 pays for itself.</p>
+                </div>
+
+                <div class="calc-wrapper reveal">
+                    <div class="calc-layout">
+
+                        <!-- Inputs -->
+                        <div class="calc-inputs">
+                            <h3 class="headline-md">Clinic Metrics</h3>
+                            <p class="body-md" style="color: var(--on-surface-variant);">Adjust the sliders to match
+                                your dental clinic's current scale.</p>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <label for="slider-chairs" class="label-lg">Active Chairs</label>
+                                    <span class="slider-value" id="val-chairs">3</span>
+                                </div>
+                                <input type="range" id="slider-chairs" min="1" max="10" value="3" aria-valuemin="1"
+                                    aria-valuemax="10" aria-valuenow="3">
+                            </div>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <label for="slider-salary" class="label-lg">Staff Salary / Chair / Mo</label>
+                                    <span class="slider-value" id="val-salary">₹12,000</span>
+                                </div>
+                                <input type="range" id="slider-salary" min="5000" max="30000" step="1000" value="12000"
+                                    aria-valuemin="5000" aria-valuemax="30000" aria-valuenow="12000">
+                            </div>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <label for="slider-procedures" class="label-lg">Procedures / Chair / Day</label>
+                                    <span class="slider-value" id="val-procedures">6</span>
+                                </div>
+                                <input type="range" id="slider-procedures" min="1" max="15" value="6" aria-valuemin="1"
+                                    aria-valuemax="15" aria-valuenow="6">
+                            </div>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="results-card">
+                            <div class="savings-block">
+                                <div class="label-lg" style="color: var(--on-surface-variant);">Estimated Monthly
+                                    Savings</div>
+                                <div class="savings-amount" id="out-savings">₹0</div>
+                            </div>
+
+                            <div class="kpi-grid">
+                                <div class="kpi-box">
+                                    <div class="kpi-val" id="out-hours">0</div>
+                                    <div class="label-sm">Clinical Hours Saved / Mo</div>
+                                </div>
+                                <div class="kpi-box">
+                                    <div class="kpi-val" id="out-payback">0 weeks</div>
+                                    <div class="label-sm">Investment Recovery</div>
+                                </div>
+                            </div>
+
+                            <div class="calc-cta">
+                                <p style="color: var(--on-surface-variant);">Assist 2.0 enables solo dentistry and pays
+                                    for itself within weeks.</p>
+                                <a href="#contact" class="btn btn-accent">Equip My Operatories</a>
+                            </div>
+                            <p class="calc-disclaimer">*Based on standard Indian operatory time valuations and staff
+                                reallocation efficiencies.</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -576,87 +657,7 @@
             </div>
         </section>
 
-        <!-- ============================================================
-         ROI CALCULATOR
-         ============================================================ -->
-        <section class="section-spacing calc-section" id="calculator" aria-labelledby="calc-heading">
-            <div class="container">
-                <div class="section-header reveal">
-                    <div class="section-label label-lg">Your Savings</div>
-                    <h2 id="calc-heading">Calculate Your Practice Savings</h2>
-                    <p>See how much clinical overhead you eliminate and how fast Assist 2.0 pays for itself.</p>
-                </div>
-
-                <div class="calc-wrapper reveal">
-                    <div class="calc-layout">
-
-                        <!-- Inputs -->
-                        <div class="calc-inputs">
-                            <h3 class="headline-md">Clinic Metrics</h3>
-                            <p class="body-md" style="color: var(--on-surface-variant);">Adjust the sliders to match
-                                your dental clinic's current scale.</p>
-
-                            <div class="slider-group">
-                                <div class="slider-header">
-                                    <label for="slider-chairs" class="label-lg">Active Chairs</label>
-                                    <span class="slider-value" id="val-chairs">3</span>
-                                </div>
-                                <input type="range" id="slider-chairs" min="1" max="10" value="3" aria-valuemin="1"
-                                    aria-valuemax="10" aria-valuenow="3">
-                            </div>
-
-                            <div class="slider-group">
-                                <div class="slider-header">
-                                    <label for="slider-salary" class="label-lg">Staff Salary</label>
-                                    <span class="slider-value" id="val-salary">₹12,000</span>
-                                </div>
-                                <input type="range" id="slider-salary" min="5000" max="30000" step="1000" value="12000"
-                                    aria-valuemin="5000" aria-valuemax="30000" aria-valuenow="12000">
-                            </div>
-
-                            <div class="slider-group">
-                                <div class="slider-header">
-                                    <label for="slider-procedures" class="label-lg">Procedures</label>
-                                    <span class="slider-value" id="val-procedures">6</span>
-                                </div>
-                                <input type="range" id="slider-procedures" min="1" max="15" value="6" aria-valuemin="1"
-                                    aria-valuemax="15" aria-valuenow="6">
-                            </div>
-                        </div>
-
-                        <!-- Results -->
-                        <div class="results-card">
-                            <div class="savings-block">
-                                <div class="label-lg" style="color: var(--on-surface-variant);">Estimated Monthly
-                                    Savings</div>
-                                <div class="savings-amount" id="out-savings">₹0</div>
-                            </div>
-
-                            <div class="kpi-grid">
-                                <div class="kpi-box">
-                                    <div class="kpi-val" id="out-hours">0</div>
-                                    <div class="label-sm">Clinical Hours Saved / Mo</div>
-                                </div>
-                                <div class="kpi-box">
-                                    <div class="kpi-val" id="out-payback">0 weeks</div>
-                                    <div class="label-sm">Investment Recovery</div>
-                                </div>
-                            </div>
-
-                            <div class="calc-cta">
-                                <p style="color: var(--on-surface-variant);">Assist 2.0 enables solo dentistry and pays
-                                    for itself within weeks.</p>
-                                <a href="#contact" class="btn btn-accent">Equip My Operatories</a>
-                            </div>
-                            <p class="calc-disclaimer">*Based on standard Indian operatory time valuations and staff
-                                reallocation efficiencies.</p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <!-- ============================================================
          TEAM
          ============================================================ -->
