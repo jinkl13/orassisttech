@@ -883,19 +883,18 @@ textarea.form-control {
    ----------------------------------------------------------------- */
 .products-section {
     background: var(--background);
-    border-top: 1px solid var(--outline-variant);
-    border-bottom: 1px solid var(--outline-variant);
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align
 }
 
 .product-img-wrap {
     position: relative;
-    width: 100%;
+    width: fit-content;
     height: 200px;
     overflow: hidden;
     border-radius: var(--rounded);
@@ -1066,8 +1065,6 @@ textarea.form-control {
    ----------------------------------------------------------------- */
 .calc-section {
     background: var(--background);
-    border-top: 1px solid var(--outline-variant);
-    border-bottom: 1px solid var(--outline-variant);
 }
 
 .calc-wrapper {
@@ -1277,7 +1274,6 @@ input[type="range"]::-moz-range-thumb {
    ----------------------------------------------------------------- */
 .contact-section {
     background: var(--background);
-    border-top: 1px solid var(--outline-variant);
 }
 
 .contact-details {
@@ -2459,4 +2455,14 @@ section video card styles
     height: 50px;
     font-size: 20px;
   }
+}
+
+
+
+
+.insiderCard{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex:1;
 }
