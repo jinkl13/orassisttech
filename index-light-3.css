@@ -2466,3 +2466,9 @@ section video card styles
     gap: 12px;
     flex:1;
 }
+
+@media (max-width: 888px) {
+    .insiderCard{
+        flex-direction: column;
+    }
+}
