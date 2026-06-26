@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>Orassist | Hands-Free Dental Suction Holder — Made in India</title>
+    <meta name="description"
+        content="Orassist manufactures innovative dental clinic equipment in India. assist 2.0 is a hands-free static saliva ejector — an ergonomic dental assistant alternative that enhances clinical efficiency, hygiene, and solo dentistry workflows.">
+    <meta name="keywords"
+        content="hands free saliva ejector, dental suction holder, dental assistant alternative, solo dentistry, dental clinic equipment India, Orassist, Kerala dental startup, static saliva ejector, dental productivity, ergonomic dental suction">
+    <meta name="author" content="Orassist LLP">
+    <meta name="robots" content="index, follow">
+
+    <!-- GEO-SEO -->
+    <meta name="geo.region" content="IN-KL">
+    <meta name="geo.placename" content="Muvattupuzha, Ernakulam, Kerala">
+    <meta name="geo.position" content="9.9812;76.5784">
+    <meta name="ICBM" content="9.9812, 76.5784">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Orassist | Hands-Free Dental Suction Holder">
+    <meta property="og:description"
+        content="assist 2.0 — the ergonomic static saliva ejector that replaces a human dental assistant. Kerala Startup Mission recognized. Made in India.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.orassist.tech">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:site_name" content="Orassist">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Orassist | Hands-Free Dental Suction Holder">
+    <meta name="twitter:description"
+        content="assist 2.0 — compact, ergonomic dental suction holder. Enhances visibility, hygiene, and clinical efficiency for solo dentists.">
+    <meta name="twitter:image" content="assets/logo.png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="index-light-3.css">
+
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.orassist.tech/#organization",
+        "name": "Orassist LLP",
+        "url": "https://www.orassist.tech",
+        "logo": "https://www.orassist.tech/assets/logo.png",
+        "email": "orassisttech@gmail.com",
+        "telephone": "+91-7012-423-110",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Muvattupuzha",
+          "addressLocality": "Ernakulam",
+          "addressRegion": "Kerala",
+          "postalCode": "686661",
+          "addressCountry": "IN"
+        },
+        "description": "Orassist manufactures innovative dental clinic equipment in India, including hands-free saliva ejectors designed as dental assistant alternatives."
+      },
+      {
+        "@type": "Product",
+        "@id": "https://www.orassist.tech/#assist-1-0",
+        "name": "assist 2.0",
+        "description": "A smart, compact, ergonomic dental suction holder that acts as a static hand for saliva ejection, enabling solo dentistry.",
+        "brand": { "@type": "Brand", "name": "Orassist" },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "price": "12000",
+          "availability": "https://schema.org/InStock",
+          "url": "https://www.orassist.tech/product-page/assist-1-0"
+        }
+      }
+    ]
+  }
+  </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================================
+       HEADER
+       ============================================================ -->
+    <div class="nav-actions">
+                <a href="#products" class="nav-cart" aria-label="View products">
+                    <i class="ph ph-shopping-cart"></i>
+                </a>
+                <a href="#contact" class="buyNow" id="buyNow">Buy now</a>
+            </div>
+
+    
+
+      
+
+    
+
+    <script src="index-light-3.js"></script>
+    <script src="script.js"></script>
+    
+
+    <!-- ============================================================
+       NEW SECTIONS: Testimonial tabs, video embeds, scroll animations
+       ============================================================ -->
+    <script>
+        (function () {
+            /* ---- Testimonial tabs ---- */
+            const testiTabs = document.querySelectorAll('.testi-tab');
+            const testiPanels = document.querySelectorAll('.testi-panel');
+            testiTabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    testiTabs.forEach(function (t) {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    testiPanels.forEach(function (p) { p.classList.remove('active'); });
+                    tab.classList.add('active');
+                    tab.setAttribute('aria-selected', 'true');
+                    const target = document.getElementById('testi-panel-' + tab.dataset.testiTab);
+                    if (target) target.classList.add('active');
+                });
+            });
+
+            /* ---- YouTube embed on thumbnail click ---- */
+            document.querySelectorAll('.testi-video-thumb').forEach(function (thumb) {
+                thumb.addEventListener('click', function () {
+                    const ytUrl = thumb.dataset.yt;
+                    if (!ytUrl) return;
+                    const iframe = document.createElement('iframe');
+                    iframe.src = ytUrl + '?autoplay=1&rel=0';
+                    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.style.cssText = 'width:100%;height:100%;border:none;border-radius:inherit;position:absolute;inset:0;';
+                    thumb.innerHTML = '';
+                    thumb.style.position = 'relative';
+                    thumb.appendChild(iframe);
+                });
+            });
+
+            /* ---- Intersection Observer scroll animations ---- */
+            var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            function setupObserver(selector, options) {
+                var els = document.querySelectorAll(selector);
+                if (!els.length) return;
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('anim-in');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, options || { threshold: 0.15 });
+                els.forEach(function (el) { obs.observe(el); });
+            }
+
+            if (!prefersReduced) {
+                
+                setupObserver('.testi-tabs');
+                setupObserver('.testi-card');
+                setupObserver('.testi-video-card');
+                setupObserver('.testi-mixed-card');
+                setupObserver('.testi-mixed-video');
+                setupObserver('.reveal-stagger');
+            } else {
+                /* Reduced motion: just make everything visible */
+                document.querySelectorAll('.testi-tabs,.testi-card,.testi-video-card,.testi-mixed-card,.testi-mixed-video,.reveal-stagger').forEach(function (el) {
+                    el.classList.add('anim-in', 'anim-reduced');
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
