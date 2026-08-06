@@ -2458,7 +2458,7 @@ section video card styles
 
 .insiderCard{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 12px;
     flex:1;
 }
@@ -2562,4 +2562,19 @@ section video card styles
     .teamDesignation {
         font-size: 0.9rem;
     }
+}
+
+.flex1{
+    flex:1;
+}
+
+.ps1 {
+    display: flex;
+    gap: 40px;
+}
+
+.feature-pills{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
