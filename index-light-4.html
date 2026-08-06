@@ -142,9 +142,16 @@
 
                 <div class="video-block reveal">
                     <div class="video-wrapper" id="thumb-wrap">
-                        <video autoplay muted loop class="thumb-img">
-                            <source src="files/hero_optimised.mp4" type="video/mp4" />
-                        </video>
+                        <iframe 
+                            width="100%" 
+                            height="500" 
+                            src="https://www.youtube.com/embed/XFlzjyi82ds?autoplay=1&mute=1&loop=1&playlist=XFlzjyi82ds&controls=0&playsinline=1" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
                         <div class="play-btn" id="open-overlay" role="button" tabindex="0" aria-label="Play video in overlay">
                             <div class="play-icon">&#9654;</div>
                         </div>
@@ -254,7 +261,7 @@
                         <div class="insiderCard">
                             <div class="productSubcard">
                                 <div class="product-img-wrap">
-                                    <img src="assets/assist2.jpeg" alt="assist 2.0 — hands-free dental suction holder"
+                                    <img src="assets/product/assist2.png" alt="assist 2.0 — hands-free dental suction holder"
                                         loading="lazy">
                                     <span class="product-badge badge-primary">Flagship</span>
                                 </div>
@@ -325,7 +332,7 @@
                             <!-- Sub Card 1: Assist 1.0 Sold Out -->
                             <div class="suite-sub-card card" style="padding: var(--space-sm);">
                                 <div class="suite-sub-card-img-wrap">
-                                    <img src="assets/assist2.jpeg" alt="Assist 1.0 — sold out" loading="lazy">
+                                    <img src="assets/product/pro1.jpeg" alt="Assist 1.0 — sold out" loading="lazy">
                                     <span class="product-badge badge-neutral">Sold Out</span>
                                 </div>
                                 <div style="flex: 1;">
@@ -451,47 +458,75 @@
          ============================================================ -->
         <section class="section-spacing" id="team" aria-labelledby="team-heading">
             <div class="container">
-                <div class="section-header reveal">
-                    <div class="section-label label-lg">The Innovators</div>
-                    <h2 id="team-heading">Meet the Orassist Team</h2>
-                    <p>Dentists, operational navigators, and market makers dedicated to clinical transformation.</p>
+                <div class="section-header reveal-stagger" style="transition-delay: 0ms;">
+                    <div class="section-label label-lg">we are few</div>
+                    <h2 id="team-heading">Our People</h2>
                 </div>
 
-                <div class="grid grid-12 reveal">
-                    <div class="col-span-3 card team-card">
-                        <div class="avatar" aria-hidden="true"><span class="avatar-initials">DA</span></div>
-                        <h3>Dr. Akash</h3>
-                        <div class="member-role label-sm">Problem Solver &amp; Innovator</div>
-                        <p class="member-bio">Graduated from Amrita School of Dentistry. Author of "How to Learn Without
-                            Studying". Developed innovative learning strategy courses with Future School.</p>
+                <div class="grid">
+                    <div class="row1">
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.05s;">
+                            <img src="assets/people/oras1.png" alt="Dr. Akash KS" class="member1">
+                            <p class="teamDesignation">CPO</p>
+                            <h3 class="teamName">Dr. Akash KS</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.10s;">
+                            <img src="assets/people/oras2.png" alt="Ajith Sreenivasan" class="member1">
+                            <p class="teamDesignation">Design Consultant</p>
+                            <h3 class="teamName">Ajith Sreenivasan</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.15s;">
+                            <img src="assets/people/oras3.png" alt="Dr. Adwaith Dev" class="member1">
+                            <p class="teamDesignation">CMO</p>
+                            <h3 class="teamName">Dr. Adwaith Dev</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.20s;">
+                            <img src="assets/people/oras4.png" alt="Gokul Gopan" class="member1">
+                            <p class="teamDesignation">Marketing and BDA</p>
+                            <h3 class="teamName">Gokul Gopan</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.25s;">
+                            <img src="assets/people/oras5.png" alt="Dr. Gayathri P" class="member1">
+                            <p class="teamDesignation">COO</p>
+                            <h3 class="teamName">Dr. Gayathri P</h3>
+                        </div>
                     </div>
 
-                    <div class="col-span-3 card team-card">
-                        <div class="avatar" aria-hidden="true"><span class="avatar-initials">SK</span></div>
-                        <h3>Shylaja K S</h3>
-                        <div class="member-role label-sm">Capitol Navigator</div>
-                        <p class="member-bio">Managing Director of Maxdent Ortho Pvt Ltd — India's first orthodontic
-                            dental lab — for 27 years. Expert in fund management and strategic decision-making.</p>
+                    <div class="row2">
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.30s;">
+                            <img src="assets/people/oras6.png" alt="Ajul P Babu" class="member1">
+                            <p class="teamDesignation">Production & QA</p>
+                            <h3 class="teamName">Ajul P Babu</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.35s;">
+                            <img src="assets/people/oras7.png" alt="K K Sasi" class="member1">
+                            <p class="teamDesignation">Board of Advisors</p>
+                            <h3 class="teamName">K K Sasi</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.40s;">
+                            <img src="assets/people/oras8.png" alt="Jishnu N" class="member1">
+                            <p class="teamDesignation">Digital Product Owner</p>
+                            <h3 class="teamName">Jishnu N</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.45s;">
+                            <img src="assets/people/oras9.png" alt="Shylaja K S" class="member1">
+                            <p class="teamDesignation">Finance Manager</p>
+                            <h3 class="teamName">Shylaja K S</h3>
+                        </div>
+                        <div class="teamCard reveal-stagger" style="transition-delay: 0.50s;">
+                            <img src="assets/people/oras10.png" alt="Jai Krishnan" class="member1">
+                            <p class="teamDesignation">CTO</p>
+                            <h3 class="teamName">Jai Krishnan</h3>
+                        </div>
                     </div>
 
-                    <div class="col-span-3 card team-card">
-                        <div class="avatar" aria-hidden="true"><span class="avatar-initials">AD</span></div>
-                        <h3>Dr. Advaith S Dev</h3>
-                        <div class="member-role label-sm">Visual Story Crafter</div>
-                        <p class="member-bio">Graduated from Mar Baselios Dental College. Freelance clinical
-                            cinematographer specializing in surgical documentation and digital workflows.</p>
-                    </div>
-
-                    <div class="col-span-3 card team-card">
-                        <div class="avatar" aria-hidden="true"><span class="avatar-initials">AB</span></div>
-                        <h3>Arnold Jacob Benny</h3>
-                        <div class="member-role label-sm">Market Maker &amp; Brand Champion</div>
-                        <p class="member-bio">BBA from Jain University. Currently pursuing a Bachelor of Dental Surgery
-                            at Kannur Dental College. Bridges brand value to clinicians nationwide.</p>
-                    </div>
                 </div>
             </div>
         </section>
+
+
+        
+
 
         <!-- ============================================================
          CONTACT
@@ -707,18 +742,43 @@
                 els.forEach(function (el) { obs.observe(el); });
             }
 
+            function setupTeamSection() {
+                var section = document.querySelector('.team-section');
+                if (!section) return;
+                var cards = section.querySelectorAll('.people-card');
+                var obs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            section.classList.add('in-view');
+                            cards.forEach(function (card) {
+                                card.classList.add('show');
+                            });
+                        } else {
+                            section.classList.remove('in-view');
+                            cards.forEach(function (card) {
+                                card.classList.remove('show');
+                            });
+                        }
+                    });
+                }, { threshold: 0.25 });
+                obs.observe(section);
+            }
+
             if (!prefersReduced) {
-                
                 setupObserver('.testi-tabs');
                 setupObserver('.testi-card');
                 setupObserver('.testi-video-card');
                 setupObserver('.testi-mixed-card');
                 setupObserver('.testi-mixed-video');
                 setupObserver('.reveal-stagger');
+                setupTeamSection();
             } else {
                 /* Reduced motion: just make everything visible */
-                document.querySelectorAll('.testi-tabs,.testi-card,.testi-video-card,.testi-mixed-card,.testi-mixed-video,.reveal-stagger').forEach(function (el) {
+                document.querySelectorAll('.testi-tabs,.testi-card,.testi-video-card,.testi-mixed-card,.testi-mixed-video,.reveal-stagger,.team-section').forEach(function (el) {
                     el.classList.add('anim-in', 'anim-reduced');
+                });
+                document.querySelectorAll('.people-card').forEach(function (card) {
+                    card.classList.add('show');
                 });
             }
         })();
